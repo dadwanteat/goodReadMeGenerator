@@ -10,23 +10,43 @@ const questions = [{
     {
         type: "input",
         name: "description",
-        message: "Describe your README"
+        message: "Describe your Application"
     },
     {
         type: "input",
         name: "tableContents",
-        message: ""
+        message: "Apply your table of Contents"
     },
     {
         type: "input",
-        name: "linkedin",
-        message: "What is your linkedin username?"
+        name: "installation",
+        message: "How do you install your app?"
     },
     {
         type: "input",
-        name: "github",
-        message: "What is your github username?"
-    }
+        name: "usage",
+        message: "Include a 'usage' section."
+    },
+    {
+        type: "input",
+        name: "license",
+        message: "Include applicable licensing",
+    },
+    {
+        type: "input",
+        name: "contributing",
+        message: "Who contributed?",
+    },
+    {
+        type: "input",
+        name: "tests",
+        message: "Include product testing here",
+    },
+    {
+        type: "input",
+        name: "questions",
+        message: "Include a 'questions' section",
+    },
 ];
 
 // function to write README file
