@@ -19,6 +19,31 @@ const questions = [{
     },
     {
         type: "input",
+        name: "tableContents1",
+        message: "Apply your table of Contents"
+    },
+    {
+        type: "input",
+        name: "tableContents2",
+        message: "Apply your table of Contents"
+    },
+    {
+        type: "input",
+        name: "tableContents3",
+        message: "Apply your table of Contents"
+    },
+    {
+        type: "input",
+        name: "tableContents4",
+        message: "Apply your table of Contents"
+    },
+    {
+        type: "input",
+        name: "tableContents5",
+        message: "Apply your table of Contents"
+    },
+    {
+        type: "input",
         name: "installation",
         message: "How do you install your app?"
     },
@@ -50,23 +75,24 @@ const questions = [{
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {
-    generateMarkdown
-    fs.writeFile("README.md", repoNamesStr, function(err) {
+function writeToFile(data) {
+
+    fs.writeFile("README.md", data, function(err) {
         if (err) {
             throw err;
-        }
+        } 
 
-        console.log(`Saved ${repoNames.length} repos`);
+        // console.log(`Saved ${repoNames.length} repos`);
     });
 }
 
 // function to initialize program
 function init() {
     inquirer.prompt(questions)
-        .then(function(res) {
-            let markdown = (generateMarkdown(res));
-            console.log(markdown);
+        .then(function(response) {
+            let markdown = (generateMarkdown(response));
+            writeToFile(markdown);
+            // console.log(markdown);
         })
 }
 
