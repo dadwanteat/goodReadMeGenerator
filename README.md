@@ -1,6 +1,3 @@
-#
-    TITLE: Robert's Readme
-
 # goodReadMeGenerator
 
 This is a CLI based application that will take input requested by inquire, and generate it into a formatted readme file upon completion.
@@ -52,4 +49,3 @@ Sample CLI Generated README:
     QUESTIONS
     Any Questions?
 
-  
